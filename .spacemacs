@@ -55,7 +55,9 @@ values."
      spell-checking
      syntax-checking
      ;; version-control
-     )
+     
+
+)
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
@@ -333,6 +335,8 @@ you should place your code here."
   (global-company-mode t)
   (push 'company-robe company-backends)
 
+  (setq org-todo-keywords
+        '((sequence "TODO(t)" "IN PROGRESS(p)" "WAITING(w)" "|" "DONE(d)")))
   )
 
 
